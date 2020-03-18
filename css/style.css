@@ -1,0 +1,152 @@
+body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    color: #333;
+    font-size: 0;
+    background-color: #fcfcfc;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+
+  .left {
+    width: 65%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .right {
+    width: 35%;
+    height: 100%;
+    display: inline-block;
+    background-color: #6b15b6;
+    vertical-align: top;
+    padding: 140px 50px;
+  }
+
+  .top {
+    font-size: 1.5rem;
+    padding: 30px 60px;
+  }
+
+  .container {
+    padding: 20px 80px 20px 120px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin: 20px auto 0px;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+
+  .label {
+    display: inline-block;
+    margin-right: 7%;
+    margin-bottom: 20px;
+    vertical-align: top;
+  }
+
+  .label h5 {
+    font-size: 0.8rem;
+    margin: 10px auto;
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .label input {
+    font-family: Lato, sans-serif;
+    padding: 11px 17px;
+    border-radius: 4px;
+    border: 0.5px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #eaeef6;
+  }
+
+  .label input:valid {
+    border-color: #a69ac4 !important;
+  }
+
+  .label input:focus {
+    outline: none;
+  }
+
+  .label span {
+    font-size: 0.7rem;
+    color: #aaa;
+    margin-top: 7px;
+    display: inline-block;
+  }
+
+  .button {
+    padding: 11px 40px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #6b15b6;
+    color: #fff;
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+    cursor: hand;
+    cursor: pointer;
+  }
+
+  .right h3 {
+    font-size: 2.3rem;
+    color: #efefef;
+    letter-spacing: 2px;
+  }
+
+  .right p {
+    font-size: 1.1rem;
+    color:#ddd;
+    line-height: 35px;
+  }
+
+  .secondFlow {
+    display: none;
+  }
+
+  .extension {
+    font-family: Lato, sans-serif;
+    padding: 11px 17px;
+    border-radius: 4px;
+    border: 0.5px solid #ddd;
+    font-size: 1rem;
+    background-color: #ddd;
+    display: inline-block;
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  .label select {
+    font-family: Lato, sans-serif;
+    padding: 11px 17px;
+    border-radius: 4px;
+    border: 0.5px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #eaeef6;
+  }
+
+  .label select:valid {
+    border-color: #a69ac4;
+  }
+
+  .label select:focus {
+    outline: none;
+  }

@@ -1,0 +1,103 @@
+<div class="searchElement"><form method="get" action="/jobs/">
+    <div class="form"><input type="text" name="career" value="All job openings" onClick="this.select();"><span>in</span><input type="text" name="location" id="locationSearch" placeholder="Enter a location" onClick="this.select();">
+    <input style="display: none;" name="range">
+    <input style="display: none;" name="time">
+    <input style="display: none;" name="industry">
+    <input style="display: none;" name="focus">
+    <input style="display: none;" name="salary">
+    <input style="display: none;" name="size">
+    <input type="submit" style="display: none;">
+    </div>
+    <div class="filters">
+      <ul>
+        <div class="overfilter rangeFilter"><li><i class="fas fa-angle-down"></i><span>Range</span></li>
+
+            <div class="filterBox" style="display: none;">
+                <ul>
+                    <li class="clear"><b>Clear</b></li>
+                    <li>< 5 km</li>
+                    <li>< 15 km</li>
+                    <li>< 50 km</li>
+                    <li>< 100 km</li>
+                    <li>< 200 km</li>
+                </ul>
+            </div>
+        </div>
+        <div class="overfilter timeFilter"><li><i class="fas fa-angle-down"></i><span>Employement</span></li>
+
+            <div class="filterBox" style="display: none;">
+                <ul>
+                    <li class="clear"><b>Clear</b></li>
+                    <li>Full-time</li>
+                    <li>Part-time</li>
+                    <li>Internship</li>
+                </ul>
+            </div>
+        </div>
+        <div class="overfilter industryFilter"><li><i class="fas fa-angle-down"></i>Industry</li>
+
+            <div class="filterBox" style="display: none;">
+                <ul>
+                    <li class="clear"><b>Clear</b></li>
+                    <li>Artificial Intelligence</li>
+                    <li>Robotics</li>
+                    <li>Healthcare</li>
+                    <li>Sports</li>
+                    <li>Education</li>
+                    <li>Space</li>
+                    <li>Transportation</li>
+                    <li>Appearance</li>
+                    <li>Nutrition</li>
+                </ul>
+            </div>
+        </div>
+        <a href="#"><li>|</li></a>
+        <a href="#"><li class="searchFilter">Search</li></a>
+      </ul>
+    </div>
+
+    <div class="advancedFilters">
+        <div class="open" onclick="toggleAdvancedFilters()" style="
+                         "><p style="
+    width: 10px;
+    display: inline-block;
+    margin: 0;
+">+</p> Advanced filters
+        </div>
+        <div class="filters"><input onclick="this.select();" type="text" name="focus" placeholder="What fields does the company tackle?" style="
+    margin-right: 3%;
+">
+    
+    <div class="salary">$<input onclick="this.select();" type="number" id="salary0" placeholder="0" min="0" step="10000" style="
+    margin-right: 3%;
+    width: 40%;
+">-<input onclick="this.select();" type="number" id="salary1" placeholder="200000" min="0" step="10000" style="
+    width: 40%;
+    margin-left: 3%;
+    "></div>
+      <ul style="
+    display: inline-block;
+    width: 40%;
+">
+        
+        <div class="overfilter sizeFilter"><li><i class="fas fa-angle-down"></i><span style>Employees</span></li>
+
+            <div class="filterBox" style="display: none;">
+                <ul>
+                    <li class="clear"><b>Clear</b></li>
+                    <li>1 - 5</li>
+                    <li>6 - 10</li>
+                    <li>11 - 25</li>
+                    <li>26 - 100</li>
+                    <li>101 - 250</li>
+                    <li>+250</li>
+                </ul>
+            </div>
+        </div>
+ 
+      </ul>
+    </div>
+    </form>
+        
+    </div>
+</div>

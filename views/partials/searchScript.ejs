@@ -1,0 +1,205 @@
+<script>
+// Fill in the career search input
+var url_string = window.location.href
+var url = new URL(url_string);
+var career = url.searchParams.get("career");
+if(career && career != "All job openings") {
+  $('.resultsPage input[name="career"]').val(career);
+  // ========== Perform fake demo functionality
+  $('.positionTitle').text(career);
+  let num1 = Math.floor((Math.random() * 12) + 1);
+  let num2 = Math.floor((Math.random() * 12) + 1);
+  let num3 = Math.floor((Math.random() * 12) + 1);
+  let num4 = Math.floor((Math.random() * 12) + 1);
+  let num5 = Math.floor((Math.random() * 12) + 1);
+  let randomNumbers = [num1, num2, num3, num4, num5];
+
+  for(let i = 0; i < 5; i ++) {
+    console.log(randomNumbers[i]);
+    $('.results a:nth-child(' + randomNumbers[i] + ') .newCard').hide();
+  }
+  // === End demo functionality
+}
+
+// Fill in location input
+var loc = url.searchParams.get("location");
+if(loc) {
+  $('.resultsPage input[name="location"]').val(loc);
+  // ========== Perform fake demo functionality
+  $('.locationTag').text(loc);
+  let num1 = Math.floor((Math.random() * 12) + 1);
+  let num2 = Math.floor((Math.random() * 12) + 1);
+  let num3 = Math.floor((Math.random() * 12) + 1);
+  let num4 = Math.floor((Math.random() * 12) + 1);
+  let num5 = Math.floor((Math.random() * 12) + 1);
+  let randomNumbers = [num1, num2, num3, num4, num5];
+
+  for(let i = 0; i < 5; i ++) {
+    console.log(randomNumbers[i]);
+    $('.results a:nth-child(' + randomNumbers[i] + ') .newCard').hide();
+  }
+  // === End demo functionality
+}
+
+// Set filters that are active to a color
+var range = url.searchParams.get("range");
+var time = url.searchParams.get("time");
+var industry = url.searchParams.get("industry");
+if(range) {
+  $('.resultsPage input[name="range"]').val(range);
+  $('.rangeFilter > li').css('color', '#F93989');
+  $('.rangeFilter > li span').text(range);
+}
+if(time) {
+  $('.resultsPage input[name="time"]').val(time);
+  $('.timeFilter > li').css('color', '#F93989');
+  $('.timeFilter > li span').text(time);
+  // ========== Perform fake demo functionality
+  $('.timeTag').text(time);
+  // === End demo functionality
+}
+if(industry) {
+  $('.resultsPage input[name="industry"]').val(industry);
+  $('.industryFilter > li').css('color', '#F93989');
+  // ========== Perform fake demo functionality
+  $('.industryTag').text(industry);
+  // === End demo functionality
+}
+
+// Fill in the career search input
+var focus = url.searchParams.get("focus");
+if(focus) {
+  $('.resultsPage input[name="focus"]').val(focus);
+}
+
+// Fill in the career search input
+var focus = url.searchParams.get("focus");
+if(focus) {
+  $('.resultsPage input[name="focus"]').val(focus);
+}
+
+// Fill in the career search input
+var salary = url.searchParams.get("salary");
+if(salary  && salary != "-") {
+  $('.resultsPage input[name="salary"]').val(salary);
+  let salarySplit = salary.split("-");
+  $('.resultsPage #salary0').val(salarySplit[0]);
+  $('.resultsPage #salary1').val(salarySplit[1]);
+}
+
+var size = url.searchParams.get("size");
+if(size) {
+  $('.resultsPage input[name="size"]').val(size);
+  $('.sizeFilter > li').css('color', '#F93989');
+  $('.sizeFilter > li span').text(size);
+}
+
+if(focus || (salary  && salary != "-") || size) {
+  setTimeout(function(){ 
+    toggleAdvancedFilters();
+}, 800);
+}
+
+
+// Hiding modal when clicking outside of it
+$(document).mouseup(function(e) {
+  let container = $(".filterBox");
+  if(!container.is(e.target) && container.has(e.target).length === 0 && container.is(":visible")) {
+    $('.filterBox').hide();
+  }
+})
+
+// Opening the filter options
+$('.overfilter').click( function() {
+  $(this).find('.filterBox').show();
+})
+
+// Allow filters to send form with val
+$('.rangeFilter .filterBox li:not(.clear)').click( function() {
+  $('input[name="range"]').val($(this).text());
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.timeFilter .filterBox li:not(.clear)').click( function() {
+  $('input[name="time"]').val($(this).text());
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.industryFilter .filterBox li:not(.clear)').click( function() {
+  $('input[name="industry"]').val($(this).text());
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.sizeFilter .filterBox li:not(.clear)').click( function() {
+  $('input[name="size"]').val($(this).text());
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+// Make sure the salaries are combined and put in the salary val
+$('#salary0, #salary1').on('input', function() {
+    $('.resultsPage input[name="salary"]').val($('#salary0').val() + '-' + $('#salary1').val())
+    if($('.resultsPage input[name="salary"]').val() == "-") {
+      $('.resultsPage input[name="salary"]').val("");
+    }
+});
+
+
+// Allow clearing of filters
+$('.rangeFilter .clear').click( function() {
+  $('input[name="range"]').val("");
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.timeFilter .clear').click( function() {
+  $('input[name="time"]').val("");
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.industryFilter .clear').click( function() {
+  $('input[name="industry"]').val("");
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.sizeFilter .clear').click( function() {
+  $('input[name="size"]').val("");
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('.searchFilter').click( function() {
+  $(this).closest('.resultsPage > div').find('input[type="submit"]').click();
+})
+
+$('form').submit( function() {
+  emptyValues();
+})
+
+// Function to clear all empty value names before form submit
+function emptyValues() {
+  $('.resultsPage input').each( function () {
+    if(!$(this).val()) {
+      let inputName = $(this).attr("name");
+      $(this).removeAttr('name');
+    }
+  })
+}
+
+// Toggle advanced filters
+function toggleAdvancedFilters() {
+  $('.advancedFilters .filters').toggleClass('showFilters');
+  if($('.advancedFilters .open p').text() == '+') {
+    $('.advancedFilters .open p').text('-');
+  } else {
+    $('.advancedFilters .open p').text('+')
+  }
+}
+
+// Autocomplete functionalitu 
+
+function initialize() {
+  var input = document.getElementById('locationSearch');
+  new google.maps.places.Autocomplete(input);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>

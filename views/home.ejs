@@ -1,0 +1,146 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+
+  <title>Sign up for your 30-day free trial - Academy of Mine</title>
+  <meta name="description" content="">
+
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+  <!-- Provide jQuery framework -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+  function nextFlow() {
+    var isValid = true;
+     $('.firstFlow input, .firstFlow select').filter('[required]:visible').each(function() {
+      if ( $(this).val() === '' )
+         isValid = false;
+         $(this).css('border-color', '#d74747');
+    });
+    if(isValid) {
+      $('.firstFlow').fadeOut(600);
+      $('.secondFlow').delay(600).fadeIn(600);
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="left">
+  <div class="top">
+    <img src="https://www.academyofmine.com/wp-content/uploads/2020/01/logo-main.png" style="width: 160px;">
+  </div>
+
+  <div class="container firstFlow">
+    <div class="header">
+      <h1>Start your 30-day free trial</h1>
+      <p>No credit card required.</p>
+    </div>
+
+    <div class="form">
+      <div class="row">
+        <div class="label" style="width: 38%;">
+          <div><h5>Company Name</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
+          <input type="text" name="companyName" placeholder="e.g  Dunder Mifflin" required>
+        </div>
+        <div class="label" style="width: 40%;">
+          <div><h5>Full Name</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
+          <input type="text" name="fullName" placeholder="e.g  Michael Scott" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label" style="width: 43%;">
+          <div><h5>Work Email</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
+          <input type="text" name="workEmail" placeholder="e.g  Work Email" required>
+          <span>Will be used for verification</span>
+        </div>
+        <div class="label" style="width: 40%;">
+          <div><h5>Password</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
+          <input type="text" name="password" placeholder="" required>
+        </div>
+      </div>
+      <div class="button" onClick="nextFlow()">
+        Next
+      </div>
+    </div>
+  </div>
+
+  <div class="container secondFlow">
+    <div class="header">
+      <h1>Almost done!</h1>
+      <p>Last few details to set up your environment.</p>
+    </div>
+
+    <div class="form">
+      <div class="row">
+        <div class="label" style="width: 80%;">
+          <div><h5>Learning Environment</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
+          <input type="text" name="domain" placeholder="e.g  dundermifflin" style="width: 40%; border-radius: 4px 0px 0px 4px; margin-right: -1px;" required>
+          <div class="extension">.academyofmine.com</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label" style="width: 40%;">
+          <div><h5>Industry</h5></div>
+          <select type="text" name="industry" required>
+            <option value="" disabled selected>Select your industry</option>
+            <option value="construction">Construction</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="technology">Technology</option>
+          </select>
+        </div>
+        <div class="label" style="width: 20%;">
+          <div><h5>Team Size</h5></div>
+          <select type="text" name="teamSize" required>
+            <option value="" disabled selected>e.g. 2-10</option>
+            <option value="1">1</option>
+            <option value="2-10">2-10</option>
+            <option value="11-25">11-25</option>
+            <option value="26-50">26-50</option>
+            <option value="51-100">51-100</option>
+            <option value="100+">100+</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label" style="width: 35%;">
+          <div><h5>How did you find us?</h5></div>
+          <select type="text" name="channel" required>
+            <option value="" disabled selected>Select a channel</option>
+            <option value="googleSearch">Google Search</option>
+            <option value="googleAds">Google Ads</option>
+            <option value="linkedIn">LinkedIn</option>
+          </select>
+        </div>
+        <div class="label" style="width: 18%;">
+          <div><h5>Company Age</h5></div>
+          <input type="number" min="0" max="1000" step="1" name="password" placeholder="e.g. 14" required>
+        </div>
+      </div>
+      <div class="button">
+        Next
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="right">
+  <h3>A few clicks away from setting up your learning platform.</h3>
+  <p>Give our 30-day trial a shot and discover what a next-level LMS can do for your business.</p>
+</div>
+
+
+</body>
+
+</html>
