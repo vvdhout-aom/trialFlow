@@ -37,11 +37,15 @@
          $(this).css('border-color', '#d74747');
     });
     if(isValid) {
+      $('.top img').fadeOut(600);
       $('.secondFlow').fadeOut(600);
-      $('.thirdFlow').delay(600).fadeIn(600);
       $('.right h3, .right p').fadeOut(600);
+      $('.left').delay(600).animate({width: '15%'}, 1200);
+      $('.right').delay(600).animate({width: '85%'}, 1200);
+      $('.thirdFlow').delay(1800).fadeIn(300);
       setTimeout(function() {
         $('.right h3, .right p').empty();
+        $('.right').css('padding', '140px 200px');
         $('.right h3').text('🎉 Gongratulations! Verify your email to get access.');
         $('.right p').html('We have send an email to ' + '<span style="display: block; font-size: 1.3rem;"><b><u>vhout@academyofmine.com</u></b></span>' + ' with a link to verify your account and get access to your platform.');
       }, 600)
@@ -155,8 +159,8 @@
     </div>
   </div>
 
-  <div class="container thirdFlow">
-    <img style="width: 90%;" src="/partyOffice.gif" />
+  <div class="thirdFlow">
+    <i class="fas fa-check-circle" style="font-size: 4rem;"></i>
   </div>
 
 </div>

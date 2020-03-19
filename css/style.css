@@ -15,6 +15,7 @@ body {
     height: 100%;
     display: inline-block;
     vertical-align: top;
+    position: relative;
   }
 
   .right {
@@ -134,6 +135,14 @@ body {
 
   .thirdFlow {
     display: none;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 33%;
+    color: #1cdf8e;
   }
 
   .extension {
