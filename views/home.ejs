@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
   <title>Sign up for your 30-day free trial - Academy of Mine</title>
@@ -37,21 +37,42 @@
          $(this).css('border-color', '#d74747');
     });
     if(isValid) {
-      $('.top img').fadeOut(600);
-      $('.secondFlow').fadeOut(600);
-      $('.right h3, .right p').fadeOut(600);
-      $('.left').delay(600).animate({width: '15%'}, 1200);
-      $('.right').delay(600).animate({width: '85%'}, 1200);
-      $('.thirdFlow').delay(1800).fadeIn(300);
-      setTimeout(function() {
-        $('.right h3, .right p').empty();
-        $('.right').css('padding', '140px 200px');
-        $('.right h3').text('🎉 Gongratulations! Verify your email to get access.');
-        $('.right p').html('We have send an email to ' + '<span style="display: block; font-size: 1.3rem;"><b><u>vhout@academyofmine.com</u></b></span>' + ' with a link to verify your account and get access to your platform.');
-      }, 600)
-      $('.right h3, .right p').delay(620).fadeIn(600);
-      $('.right').append('<div class="newEmail" style="display: none;">Filled out an incorrect email? Reset your email <a href="#"><u>here</u></a>.</div>')
-      $('.right .newEmail').delay(6400).fadeIn(600);
+      if($(window).width() > 900) {
+        $('.top img').fadeOut(600);
+        $('.secondFlow').fadeOut(600);
+        $('.right h3, .right p').fadeOut(600);
+        $('.left').delay(600).animate({width: '15%'}, 1200);
+        $('.right').delay(600).animate({width: '85%'}, 1200);
+        $('.thirdFlow').delay(1800).fadeIn(300);
+        setTimeout(function() {
+          $('.right h3, .right h4, .right p').empty();
+          $('.right').css('padding', '140px 200px');
+          $('.right h3').html('Gongratulations! 🎉');
+          $('.right h3').after('<h4>Verify your email to get access.</h4>');
+          $('.right p').html('We have send an email to ' + '<span style="display: block; font-size: 1.3rem;"><b><u>vhout@academyofmine.com</u></b></span>' + ' with a link to verify your account.');
+          $('.right').append('<div class="newEmail" style="display: none;">Filled out an incorrect email? Reset your email <a href="#"><u>here</u></a>.</div>');
+          $('.right h3, .right h4, .right p').delay(1200).fadeIn(600);
+          $('.right .newEmail').delay(5200).fadeIn(600);
+        }, 600)
+      } else {
+        $('.top img').fadeOut(600);
+        $('.secondFlow').fadeOut(600);
+        $('.right h3, .right p').fadeOut(600);
+        $('.left').delay(500).animate({height: '100px'},600);
+        $('.right').delay(500).animate({height: '100%'},600);
+        $('.thirdFlow').delay(600).fadeIn(300);
+        setTimeout(function() {
+          $('.right h3, .right h4, .right p').empty();
+          $('.right h3').html('Gongratulations! 🎉');
+          $('.right h3').after('<h4>Verify your email to get access.</h4>');
+          $('.right p').html('We have send an email to ' + '<span style="display: block; font-size: 1.3rem;"><b><u>vhout@academyofmine.com</u></b></span>' + ' with a link to verify your account.');
+          $('.right').append('<div class="newEmail" style="display: none;">Filled out an incorrect email? Reset your email <a href="#"><u>here</u></a>.</div>');
+          $('.right h3, .right h4, .right p').fadeIn(600);
+          window.scrollTo(0, 0);
+          $('.right .newEmail').delay(4200).fadeIn(600);
+        }, 600)
+
+      }
     }
   }
   </script>
