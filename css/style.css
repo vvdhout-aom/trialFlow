@@ -118,7 +118,21 @@ body {
     line-height: 35px;
   }
 
+  .right .newEmail {
+    margin-top: 100px;
+    font-size: 0.8rem;
+    color: #eee;
+  }
+
+  .right .newEmail a {
+    color: #eee;
+  }
+
   .secondFlow {
+    display: none;
+  }
+
+  .thirdFlow {
     display: none;
   }
 

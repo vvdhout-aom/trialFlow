@@ -28,6 +28,28 @@
       $('.secondFlow').delay(600).fadeIn(600);
     }
   }
+
+  function finishFlow() {
+    var isValid = true;
+     $('.secondFlow input, .secondFlow select').filter('[required]:visible').each(function() {
+      if ( $(this).val() === '' )
+         isValid = false;
+         $(this).css('border-color', '#d74747');
+    });
+    if(isValid) {
+      $('.secondFlow').fadeOut(600);
+      $('.thirdFlow').delay(600).fadeIn(600);
+      $('.right h3, .right p').fadeOut(600);
+      setTimeout(function() {
+        $('.right h3, .right p').empty();
+        $('.right h3').text('🎉 Gongratulations! Verify your email to get access.');
+        $('.right p').html('We have send an email to ' + '<span style="display: block; font-size: 1.3rem;"><b><u>vhout@academyofmine.com</u></b></span>' + ' with a link to verify your account and get access to your platform.');
+      }, 600)
+      $('.right h3, .right p').delay(620).fadeIn(600);
+      $('.right').append('<div class="newEmail" style="display: none;">Filled out an incorrect email? Reset your email <a href="#"><u>here</u></a>.</div>')
+      $('.right .newEmail').delay(6400).fadeIn(600);
+    }
+  }
   </script>
 
 </head>
@@ -92,7 +114,7 @@
       <div class="row">
         <div class="label" style="width: 40%;">
           <div><h5>Industry</h5></div>
-          <select type="text" name="industry" required>
+          <select type="text" name="industry">
             <option value="" disabled selected>Select your industry</option>
             <option value="construction">Construction</option>
             <option value="healthcare">Healthcare</option>
@@ -101,7 +123,7 @@
         </div>
         <div class="label" style="width: 20%;">
           <div><h5>Team Size</h5></div>
-          <select type="text" name="teamSize" required>
+          <select type="text" name="teamSize">
             <option value="" disabled selected>e.g. 2-10</option>
             <option value="1">1</option>
             <option value="2-10">2-10</option>
@@ -115,7 +137,7 @@
       <div class="row">
         <div class="label" style="width: 35%;">
           <div><h5>How did you find us?</h5></div>
-          <select type="text" name="channel" required>
+          <select type="text" name="channel">
             <option value="" disabled selected>Select a channel</option>
             <option value="googleSearch">Google Search</option>
             <option value="googleAds">Google Ads</option>
@@ -124,13 +146,17 @@
         </div>
         <div class="label" style="width: 18%;">
           <div><h5>Company Age</h5></div>
-          <input type="number" min="0" max="1000" step="1" name="password" placeholder="e.g. 14" required>
+          <input type="number" min="0" max="1000" step="1" name="password" placeholder="e.g. 14">
         </div>
       </div>
-      <div class="button">
-        Next
+      <div class="button" onClick="finishFlow()">
+        Finish
       </div>
     </div>
+  </div>
+
+  <div class="container thirdFlow">
+    <img style="width: 90%;" src="/partyOffice.gif" />
   </div>
 
 </div>
