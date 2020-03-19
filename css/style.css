@@ -89,6 +89,24 @@ body {
     display: inline-block;
   }
 
+  .label .password {
+    position: relative;
+  }
+
+  .label .password input {
+    padding-right: 40px;
+  }
+
+  .label .password i {
+    font-size: 0.8rem;
+    color: #ccc;
+    position: absolute;
+    padding: 15px 17px;
+    right: 0;
+    cursor: hand;
+    cursor: pointer;
+  }
+
   .button {
     padding: 11px 40px;
     border-radius: 5px;
