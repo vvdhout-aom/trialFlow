@@ -28,9 +28,10 @@
   function nextFlow() {
     var isValid = true;
      $('.firstFlow input, .firstFlow select').filter('[required]:visible').each(function() {
-      if ( $(this).val() === '' )
+      if ( $(this)[0].checkValidity() === false) {
          isValid = false;
          $(this).css('border-color', '#d74747');
+       }
     });
     if(isValid) {
       $('.firstFlow').fadeOut(600);
@@ -41,9 +42,10 @@
   function finishFlow() {
     var isValid = true;
      $('.secondFlow input, .secondFlow select').filter('[required]:visible').each(function() {
-      if ( $(this).val() === '' )
+      if ( $(this)[0].checkValidity() === false) {
          isValid = false;
          $(this).css('border-color', '#d74747');
+       }
     });
     if(isValid) {
       if($(window).width() > 900) {
@@ -97,6 +99,7 @@
     <img src="https://www.academyofmine.com/wp-content/uploads/2020/01/logo-main.png" style="width: 160px;">
   </div>
 
+  <form action="/#" method="POST">
   <div class="container firstFlow">
     <div class="header">
       <h1>Start your 30-day free trial</h1>
@@ -117,12 +120,13 @@
       <div class="row">
         <div class="label" style="width: 43%;">
           <div><h5>Work Email</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
-          <input type="text" name="workEmail" placeholder="e.g  Work Email" required>
+          <input type="email" name="workEmail" placeholder="e.g  Work Email" required>
           <span>Will be used for verification</span>
         </div>
         <div class="label" style="width: 40%;">
           <div><h5>Password</h5><span style="color:#aaa; font-size: 0.8rem;">*</span></div>
-          <div class="password"><input id="password" type="password" name="password" placeholder="" required><i onClick="showPassword();" class="fas fa-eye"></i></div>
+          <div class="password"><input id="password" type="password" name="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{12,28}$" required><i onClick="showPassword();" class="fas fa-eye"></i></div>
+          <span>Between 12 and 28 characters long with at least one lowercase, uppercase, number, <i>and</i> symbol.</span>
         </div>
       </div>
       <div class="button" onClick="nextFlow()">
@@ -197,11 +201,14 @@
           <input type="number" min="0" max="1000" step="1" name="password" placeholder="e.g. 14">
         </div>
       </div>
-      <div class="button" onClick="finishFlow()">
+      <div class="button" onClick="finishFlow();">
         Finish
       </div>
     </div>
   </div>
+
+  </form>
+
 
   <div class="thirdFlow">
     <i class="fas fa-check-circle" style="font-size: 4rem;"></i>
