@@ -48,6 +48,7 @@
        }
     });
     if(isValid) {
+      // $('form').submit();
       if($(window).width() > 900) {
         $('.top img').fadeOut(600);
         $('.secondFlow').fadeOut(600);
@@ -99,7 +100,7 @@
     <img src="https://www.academyofmine.com/wp-content/uploads/2020/01/logo-main.png" style="width: 160px;">
   </div>
 
-  <form action="/#" method="POST">
+  <form action="" method="POST">
   <div class="container firstFlow">
     <div class="header">
       <h1>Start your 30-day free trial</h1>
@@ -156,21 +157,36 @@
             <option value="" disabled selected>Select your industry</option>
             <option value="construction">Alternative Medicine</option>
             <option value="construction">Apparel & Fashion</option>
-            <option value="construction">Business Supplies and Equipment</option>
+            <option value="construction">Business Supplies & Equipment</option>
             <option value="construction">Computer Software</option>
             <option value="construction">Cosmetics</option>
             <option value="construction">Education</option>
             <option value="construction">Electronic Manufacturing</option>
             <option value="construction">Entertainment</option>
             <option value="construction">Environmental Services</option>
-            <option value="construction">Construction</option>
-            <option value="construction">Construction</option>
-            <option value="construction">Construction</option>
-            <option value="construction">Construction</option>
-            <option value="construction">Construction</option>
-            <option value="construction">Construction</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="technology">Technology</option>
+            <option value="construction">Family Services</option>
+            <option value="construction">Finance</option>
+            <option value="construction">Food & Beverages</option>
+            <option value="construction">Healthcare</option>
+            <option value="construction">Human Resources</option>
+            <option value="construction">Information Technology</option>
+            <option value="construction">Insurance</option>
+            <option value="construction">Investment Management</option>
+            <option value="construction">Law Enforcement</option>
+            <option value="construction">Legal Services</option>
+            <option value="construction">Management Consulting</option>
+            <option value="construction">Maritime</option>
+            <option value="construction">Marketing & Advertising</option>
+            <option value="construction">Medical Devices</option>
+            <option value="construction">Professional Training & Coaching</option>
+            <option value="construction">Public Safety</option>
+            <option value="construction">Real Estate</option>
+            <option value="construction">Religion</option>
+            <option value="construction">Sports</option>
+            <option value="construction">Staffing & Recruiting</option>
+            <option value="construction">Travel & Tourism</option>
+            <option value="construction">Wellness & Fitness</option>
+            <option value="construction">Writing & Editing</option>
           </select>
         </div>
         <div class="label" style="width: 20%;">
@@ -194,11 +210,14 @@
             <option value="googleSearch">Google Search</option>
             <option value="googleAds">Google Ads</option>
             <option value="linkedIn">LinkedIn</option>
+            <option value="linkedIn">Blog Referral</option>
+            <option value="linkedIn">Personal Referral</option>
+            <option value="linkedIn">Capterra</option>
           </select>
         </div>
         <div class="label" style="width: 18%;">
           <div><h5>Company Age</h5></div>
-          <input type="number" min="0" max="1000" step="1" name="password" placeholder="e.g. 14">
+          <input type="number" min="0" max="1000" step="1" name="companyAge" placeholder="e.g. 14">
         </div>
       </div>
       <div class="button" onClick="finishFlow();">
