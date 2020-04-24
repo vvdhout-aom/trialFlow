@@ -1,0 +1,131 @@
+body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    color: #333;
+    /* font-size: 0; */
+    background-color: #fcfcfc;
+
+  }
+
+/* ===== trial conversion to plan   ====== */
+
+.container {
+text-align: center;
+padding: 30px 120px 90px;
+}
+
+.heading {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+.heading p {
+  font-size: 1.1rem;
+  width: 70%;
+  margin: 20px auto;
+  line-height: 25px;
+}
+
+.monthlyAnnualToggle {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.monthlyAnnualToggle #monthly {
+  background-color: #6b15b6;
+  color: #fff;
+  border: 1px solid #6b15b6;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 3px 0 0px 3px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.monthlyAnnualToggle #annually {
+  color: #6b15b6;
+  border: 1px solid #6b15b6;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 0 3px 3px 0;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.plan {
+  width: 30%;
+      height: 500px;
+  border: 0.5px solid #ddd;
+  background-color: #fefefe;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  margin: auto;
+  vertical-align: top;
+  position: relative;
+    overflow: hidden;
+}
+
+.plan .planType {
+  font-size: 1.4rem;
+  color: #6b15b6;
+  margin-bottom: 15px;
+}
+
+.plan .price {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.plan .price span {
+  font-size: 0.9rem;
+  display: block;
+  color: #999;
+}
+
+.plan .button {
+  padding: 14px 20px;
+  background-color: #6b15b6;
+  color: #fff;
+  border-radius: 3px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.plan hr {
+  width: 40%;
+  margin: 30px auto;
+  border: 0.5px solid #ddd;
+}
+
+.plan ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+width: 85%;
+margin: auto;
+}
+
+.plan .fa-check {
+  color: #88e7a0;
+    font-size: 0.8rem;
+}
+
+.plan .fa-plus {
+  color: cornflowerblue;
+}
+
+.plan i {
+  font-size: 0.8rem;
+  margin-right: 20px;
+}
+
+.plan li {
+  padding: 7px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ===== END trial conversion to plan   ====== */

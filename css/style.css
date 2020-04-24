@@ -2,9 +2,26 @@ body {
     font-family: Lato, sans-serif;
     margin: 0;
     color: #333;
-    font-size: 0;
+    /* font-size: 0; */
     background-color: #fcfcfc;
   }
+
+/* ===== trial conversion to plan   ====== */
+
+.heading {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+.heading p {
+  font-size: 1.1rem;
+  width: 70%;
+  margin: 20px auto;
+}
+
+/* ===== END trial conversion to plan   ====== */
+
 
   div {
     box-sizing: border-box;
